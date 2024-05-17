@@ -84,8 +84,8 @@
         }
       }
       .burger-icon{
+        display: flex;
         border: 1px solid black;
-        border-radius: 5px;
         cursor: pointer;
         transition: 0.5s ease-in-out;
         &:hover{
@@ -93,54 +93,31 @@
           border: 1px solid var(--secondary-color);
         }
       }
-  
-      .sing{
-        position: relative;
-        &:hover .regis{
-          opacity: 1;
-        }
       }
-      .regis{
-        position: absolute;
-        top: 45px;
-        padding: 15px;
-        background-color: #FFFFFF;
-         display: flex;
-         opacity: 0;
-         align-items: center;
-         flex-direction: column;
-         justify-content: center;
-         gap: 10px;
-         box-shadow: 0 0  10px rgba(0, 0, 0, 0.548);
-         transition: all 0.5s ease-in-out;
-         a{
-           text-decoration: none;
-           color: #000;
-           text-transform: uppercase;
-           font-size: 18px;
-           font-weight: 400;
-           transition: 0.5s ease-in-out;
-         }
-         a:hover{
-           color: var(--secondary-color);
-         }
-       }
+    }
+    @media screen and (max-width: 768px) {
+      nav{
+        .links{
+          ul{
+            display: none;
+            position: absolute;
+            width: 90%;
+            top: 60px;
+            left: 50%;
+            transform: translate(-50%);
+            padding:15px;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+            z-index: 9;
+            background-color: var(--primary-color);
+          }
+        }
       }
     }
         .bigMenu{
-          display: flex !important;
-          position: absolute;
-          width: 90%;
-          top: 60px;
-          left: 50%;
-          transform: translate(-50%);
-          padding:15px;
-          align-items: flex-start;
-          flex-direction: column;
-          justify-content: center;
-          gap: 15px;
-          z-index: 9;
-          background-color: var(--primary-color);
+
       }
       .active{
         color: var(--secondary-color);

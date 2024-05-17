@@ -5,7 +5,7 @@ import { GiShoppingCart } from "react-icons/gi";
 import { IoIosSearch } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdClose } from "react-icons/md";
-import { IoIosArrowDown } from "react-icons/io";
+// import { IoIosArrowDown } from "react-icons/io";
 import "./header.css";
 import { useSelector } from "react-redux";
 const HeaderComp = () => {
@@ -15,7 +15,7 @@ const HeaderComp = () => {
   const cartProduct = useSelector((state)=>state.product.items)
   useEffect(() => {
       window.addEventListener("resize", () => {
-        window.innerWidth <= 850 ? setMenu(true):setMenu(false)
+        window.innerWidth <= 768 ? setMenu(true):setMenu(false)
       });
 
   },[window.innerWidth])
@@ -31,23 +31,13 @@ const HeaderComp = () => {
           </div>
           <div className="links">
             <ul 
-            className={bigMenu? 'bigMenu':undefined}
-            style={menu ? { display: "none" } :{display:'flex'}} >
+            style={bigMenu? !menu?{ display: "none" } :{display:'flex'}:undefined} >
               <li>
                 <NavLink to='/'>Home</NavLink>
               </li>
-              <li className="sing">
-                <NavLink to='/register'>Register <IoIosArrowDown/></NavLink>
-                
-                <ul className="regis">
                 <li>
                   <NavLink to="/login">Login</NavLink>
                 </li>
-                <li>
-                  <NavLink to='/register'>singup</NavLink>
-                </li>
-                </ul>
-              </li>
               <li>
                 <NavLink to='/products'>Products </NavLink>
               </li>
