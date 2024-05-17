@@ -116,9 +116,6 @@
         }
       }
     }
-        .bigMenu{
-
-      }
       .active{
         color: var(--secondary-color);
       }
