@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #FF3550;
+}
+.main{
+    width: 100%;
+    min-height: 400px;
+    margin: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    background-color:#F4F9FC;
+    .img{
+        width: 50%;
+        position: relative;
+    img{
+        position: absolute;
+        max-width:550px;
+        top: -260px;
+        left: 20px;
+    }
+    }
+    .best{
+         display: flex;
+         width: 50%;
+         align-items: center;
+         margin: 20px 0;
+         justify-content: flex-start;
+         .content_best{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            h5{
+                font-size: 18px;
+                font-weight: 800;
+                color: var(--secondary-color);
+            }
+            h2{
+                font-size: 25px;
+                font-weight: 800;
+            }
+            button {
+                display: inline-block;
+                width: 6em;
+                height: 2.6em;
+                line-height: 2.5em;
+                overflow: hidden;
+                cursor: pointer;
+                font-size: 17px;
+                z-index: 1;
+                color: var(--secondary-color);
+                border: 2px solid var(--secondary-color);
+                position: relative;
+            }
+    
+            button::before {
+                position: absolute;
+                content: "";
+                background: var(--secondary-color);
+                width: 150px;
+                height: 200px;
+                z-index: -1;
+                border-radius: 50%;
+            }
+    
+            button:hover {
+                color: white;
+            }
+    
+            button:before {
+                top: 100%;
+                left: 100%;
+                transition: 0.3s all;
+            }
+    
+            button:hover::before {
+                top: -30px;
+                left: -30px;
+            }
+    
+         }
+    }
+}
+
+@media screen and (max-width: 885px) {
+    .main{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        padding: 30px 0 0 0 ;
+        .best{
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            .content_best{
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .img{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+            position: static;
+            max-width: 300px;
+            }
+        }
+    }
+}

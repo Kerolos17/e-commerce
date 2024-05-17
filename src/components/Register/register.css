@@ -1,0 +1,117 @@
+.register{
+    width: 100%;
+    margin: 65px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form{
+        width: 40%;
+        padding: 25px 15px;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #0000008f;
+        h2{
+            text-align: center;
+            font-size: 35px;
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+        input{
+            background-color: rgba(128, 128, 128, 0.493);
+            color: #000;
+            outline: none;
+            border: none;
+            width: 80%;
+            margin: auto;
+            padding: 15px;
+            border-radius: 5px;
+            &:focus{
+                border: 2px solid #FF3550;
+            }
+        }
+        .btn{
+            width: 50%;
+            text-align: center;
+            border: 1px solid #FF3550;
+            color: #FFF;
+            background-color: #FF3550;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background-color: #FFF;
+                color: #FF3550;
+            }
+
+        }
+        .check{
+             width: 100%;
+             text-align: center;
+             display: flex;
+             gap: 5px;
+             align-items: center;
+             justify-content: flex-start;
+             color: #000000a9;
+             input{
+                padding: 0;
+                width: 20px;
+                margin: 0;
+             }
+        }
+        .icon{
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             flex-wrap: wrap;
+             gap: 5px;
+             button{
+                 display: flex;
+                 border: none;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                padding: 10px;
+                &:first-child{
+                    background-color: #344E86;
+                    color: #fff;
+                }
+                &:last-child{
+                    background-color: #D85040;
+                    color: #fff;
+                }
+             }
+        }
+        .chang{
+             width: 100%;
+             text-align: center;
+             display: flex;
+             gap: 5px;
+             align-items: center;
+             justify-content: flex-start;
+             color: #000000a9;
+             a{
+                text-decoration: none;
+                color: #000;
+                font-size: 18px;
+                font-weight: 400;
+                transition: all 0.5s ease-in-out;
+                &:hover{
+                    color: #FF3550;
+                }
+             }
+        }
+    }
+}
+@media (max-width:600px) and (min-width:220px) {
+    .register{
+        form{
+            width: 90%;
+        }
+    }
+    
+}
