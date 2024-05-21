@@ -61,7 +61,6 @@ const HeaderComp = () => {
             {
               menu ? bigMenu ? <MdClose size={30} onClick={changeMenu}  className="burger-icon"/> :
                <RxHamburgerMenu size={30} onClick={changeMenu} className="burger-icon" /> :undefined
-
             }
           </div>
         </nav>

@@ -80,12 +80,12 @@ const SingleProduct = () => {
                 <h3>Description</h3>
                 <p>{product.description}</p>
                 <hr className="line"/>
-                <span> <IoShieldCheckmarkOutline size={20} className="icon"/> 1 Year AL Jazeera Brand Warranty</span>
-                <span><IoSync size={20} className="icon"/> 30 Day Return Policy</span>
-                <span><FaSackDollar size={20} className="icon"/> Cash on Delivery available</span>
+                <span> <IoShieldCheckmarkOutline size={20} className="icon"/> <>1 Year AL Jazeera Brand Warranty</> </span>
+                <span><IoSync size={20} className="icon"/> <>30 Day Return Policy</></span>
+                <span><FaSackDollar size={20} className="icon"/> <>Cash on Delivery available</></span>
+                </div>
                 </div>
               </div>
-            </div>
           )}
       </section>
     </Fragment>
