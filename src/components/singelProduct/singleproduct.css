@@ -147,17 +147,26 @@
         line-height: 1.5;
         font-weight: 400;
       }
-
-      span {
+      .data{
+        width: 100%;
         display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: flex-start;
         justify-content: center;
-        align-items: center;
-        gap: 5px;
-        font-size: clamp(12px, 1.5vw, 16px);
-        .icon {
-          color: #FF3550;
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          font-size: clamp(12px, 1.5vw, 16px);
+          .icon {
+            color: #FF3550;
+          }
         }
       }
+
+      
     }
   }
 }

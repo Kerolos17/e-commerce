@@ -132,6 +132,7 @@ const SingleProduct = () => {
                 <h3>Description</h3>
                 <p>{product.description}</p>
                 <hr className="line" />
+                <div className="data">
                 <span>
                   {" "}
                   <IoShieldCheckmarkOutline size={20} className="icon" />{" "}
@@ -145,6 +146,7 @@ const SingleProduct = () => {
                   <FaSackDollar size={20} className="icon" />{" "}
                   <>Cash on Delivery available</>
                 </span>
+                </div>
               </div>
             </div>
           </div>
