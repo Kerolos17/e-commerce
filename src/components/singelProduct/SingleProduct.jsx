@@ -8,7 +8,7 @@ import { FaSackDollar } from "react-icons/fa6";
 // import { FaArrowCircleDown } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";
 import { FaRegHeart } from "react-icons/fa";
-import "./singleproduct.css";
+import singleProduct from "./singleproduct.module.css";
 const SingleProduct = () => {
   const { id } = useParams();
   const [product, setProduct] = useState();
@@ -44,18 +44,18 @@ const SingleProduct = () => {
   };
   return (
     <Fragment>
-      <section className="singlePro">
+      <section className={singleProduct.singlePro}>
         {product && (
-          <div className="single-product">
-            <div className="img-pro">
+          <div className={singleProduct.single_product}>
+            <div className={singleProduct.img_pro}>
               <img src={product.image} alt="" />
             </div>
-            <div className="info-pro">
-              <div className="rating">
-                <div className="star-icon">
+            <div className={singleProduct.info_pro}>
+              <div className={singleProduct.rating}>
+                <div className={singleProduct.star_icon}>
                   <CiStar
                     size={25}
-                    className="star"
+                    className={singleProduct.star}
                     onClick={handleStar}
                     style={
                       star
@@ -65,7 +65,7 @@ const SingleProduct = () => {
                   />
                   <CiStar
                     size={25}
-                    className="star"
+                    className={singleProduct.star}
                     onClick={handleStar1}
                     style={
                       star1
@@ -75,7 +75,7 @@ const SingleProduct = () => {
                   />
                   <CiStar
                     size={25}
-                    className="star"
+                    className={singleProduct.star}
                     onClick={handleStar2}
                     style={
                       star2
@@ -85,7 +85,7 @@ const SingleProduct = () => {
                   />
                   <CiStar
                     size={25}
-                    className="star"
+                    className={singleProduct.star}
                     onClick={handleStar3}
                     style={
                       star3
@@ -95,7 +95,7 @@ const SingleProduct = () => {
                   />
                   <CiStar
                     size={25}
-                    className="star"
+                    className={singleProduct.star}
                     onClick={handleStar4}
                     style={
                       star4
@@ -104,20 +104,20 @@ const SingleProduct = () => {
                     }
                   />
                 </div>
-                <div className="rate-text">{product.rating.rate}</div>
+                <div className={singleProduct.rate_text}>{product.rating.rate}</div>
               </div>
-              <div className="title">
+              <div className={singleProduct.title}>
                 <h3>{product.title}</h3>
               </div>
-              <div className="price">
+              <div className={singleProduct.price}>
                 <h3>
                   <span>price:</span> ${product.price}
                 </h3>
               </div>
-              <div className="cart-pro">
-                <button className="cart-btn">Add to Cart</button>
+              <div className={singleProduct.cart_pro}>
+                <button className={singleProduct.cart_btn}>Add to Cart</button>
                 <div
-                  className="heart"
+                  className={singleProduct.heart}
                   style={
                     heart
                       ? { backgroundColor: "#FF3550", color: "#fff" }
@@ -127,23 +127,23 @@ const SingleProduct = () => {
                   <FaRegHeart onClick={handleHeart} size={25} />
                 </div>
               </div>
-              <hr className="line" />
-              <div className="description">
+              <hr className={singleProduct.line} />
+              <div className={singleProduct.description}>
                 <h3>Description</h3>
                 <p>{product.description}</p>
-                <hr className="line" />
-                <div className="data">
+                <hr className={singleProduct.line} />
+                <div className={singleProduct.data}>
                 <span>
                   {" "}
-                  <IoShieldCheckmarkOutline size={20} className="icon" />{" "}
+                  <IoShieldCheckmarkOutline size={20} className={singleProduct.icon}/>{" "}
                   <>1 Year AL Jazeera Brand Warranty</>{" "}
                 </span>
                 <span>
-                  <IoSync size={20} className="icon" />{" "}
+                  <IoSync size={20} className={singleProduct.icon}/>{" "}
                   <>30 Day Return Policy</>
                 </span>
                 <span>
-                  <FaSackDollar size={20} className="icon" />{" "}
+                  <FaSackDollar size={20} className={singleProduct.icon}/>{" "}
                   <>Cash on Delivery available</>
                 </span>
                 </div>
