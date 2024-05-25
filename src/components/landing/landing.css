@@ -168,6 +168,9 @@
 
             }
         }
+        .left-arrow, .right-arrow {
+            opacity: 1;
+        }
 
     }
 
