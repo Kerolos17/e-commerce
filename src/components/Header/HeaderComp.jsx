@@ -15,12 +15,12 @@ const HeaderComp = () => {
       window.addEventListener("resize", () => {
         let windowSize = window.innerWidth 
         windowSize <= 768 ? setMenu(true):setMenu(false)
-        setBigMenu(false)
       });
 
   },[])
   const changeMenu = () => {
     setBigMenu(!bigMenu)
+    setMenu(!menu)
   };
   return (
     <Fragment>
@@ -31,7 +31,7 @@ const HeaderComp = () => {
           </div>
           <div className="links">
             <ul 
-            style={bigMenu? !menu?{ display: "none" } :{display:'flex'}:undefined} >
+            style={bigMenu? !menu ?{ display: "none" } :{display:'flex'}:undefined} >
               <li>
                 <NavLink to='/'>Home</NavLink>
               </li>
@@ -59,8 +59,9 @@ const HeaderComp = () => {
               </span>
             </div>
             {
-               bigMenu ? <MdClose size={30} onClick={changeMenu}  className="burger-icon"/> :
-               <RxHamburgerMenu size={30} onClick={changeMenu} className="burger-icon" /> 
+               !bigMenu ? <RxHamburgerMenu size={30} onClick={changeMenu} className="burger-icon" /> :
+                <MdClose size={30} onClick={changeMenu}  className="burger-icon"/> 
+               
             }
           </div>
         </nav>
