@@ -16,7 +16,7 @@ const HeaderComp = () => {
         window.innerWidth <= 768 ? setMenu(true):setMenu(false)
       });
 
-  },[window.innerWidth])
+  },[])
   const changeMenu = () => {
     setBigMenu(!bigMenu)
   };

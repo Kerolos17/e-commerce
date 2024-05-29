@@ -1,11 +1,9 @@
 import axios from "axios";
 import React, { Fragment, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-// import { GiShoppingCart } from "react-icons/gi";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { IoSync } from "react-icons/io5";
 import { FaSackDollar } from "react-icons/fa6";
-// import { FaArrowCircleDown } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";
 import { FaRegHeart } from "react-icons/fa";
 import singleProduct from "./singleproduct.module.css";
@@ -115,7 +113,7 @@ const SingleProduct = () => {
                 </h3>
               </div>
               <div className={singleProduct.cart_pro}>
-                <button className={singleProduct.cart_btn}>Add to Cart</button>
+                <button className={singleProduct.cart_btn} >Add to Cart</button>
                 <div
                   className={singleProduct.heart}
                   style={
