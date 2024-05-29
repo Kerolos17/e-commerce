@@ -1,49 +1,56 @@
 /* start Globel Ruls  */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  :root{
-    --primary-color: #FFFFFF;
-    --secondary-color: #FF3550;
-  }
-  /* End Globel Ruls  */
-  /* start Header */
-  header{
-    width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #FFFFFF;
+  --secondary-color: #FF3550;
+}
+
+/* End Globel Ruls  */
+/* start Header */
+header {
+  width: 100%;
+  height: 60px;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+
+  nav {
+    width: 90%;
+    margin: 0 auto;
     height: 60px;
-    background-color: var(--primary-color);
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: fixed;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    position: relative;
     top: 0;
-    z-index: 9;
-    nav{
-      width: 90%;
-      margin:0 auto;
-      height: 60px;
+
+    .links {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      background-color: var(--primary-color);
-      position: relative;
-      top: 0;
-      .links{
+      justify-content: center;
+      gap: 8px;
+
+      .icon {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
-        .icon{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 5px;
-        span{
+        gap: 5px;
+
+        span {
           color: #000;
           transition: 0.5s ease-in-out;
-          a{
+
+          a {
             text-decoration: none;
             color: #000;
             transition: all 0.5s ease-in-out;
@@ -51,72 +58,88 @@
             align-items: center;
             justify-content: center;
             gap: 5px;
-            &:hover{
+
+            &:hover {
               color: var(--secondary-color);
               cursor: pointer;
             }
           }
-          &:hover{
+
+          &:hover {
             color: var(--secondary-color);
             cursor: pointer;
-          }      }
-        }
-      }
-      ul{
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 15px;
-        li{
-          text-align: center;
-          a{
-            text-decoration: none;
-            color: #000;
-            text-transform: uppercase;
-            font-size: 16px;
-            font-weight: 400;
-            transition: 0.5s ease-in-out;
-          }
-          a:hover{
-            color: var(--secondary-color);
           }
         }
-      }
       }
     }
-    @media screen and (max-width: 768px) {
-      nav{
-        .links{
-          ul{
-            display: none;
-            position: absolute;
-            width: 90%;
-            top: 60px;
-            left: 50%;
-            transform: translate(-50%);
-            padding:15px;
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: center;
-            gap: 15px;
-            z-index: 9;
-            background-color: var(--primary-color);
-          }
-        }
-        .burger-icon{
-          display: flex !important;
-          border: 1px solid black;
-          cursor: pointer;
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+
+      li {
+        text-align: center;
+
+        a {
+          text-decoration: none;
+          color: #000;
+          text-transform: uppercase;
+          font-size: 16px;
+          font-weight: 400;
           transition: 0.5s ease-in-out;
-          &:hover{
-            color: var(--secondary-color);
-            border: 1px solid var(--secondary-color);
-          }
+        }
+
+        a:hover {
+          color: var(--secondary-color);
         }
       }
     }
-      .active{
-        color: var(--secondary-color);
+    .burger-icon{
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    .links {
+      ul {
+        display: none;
+        position: absolute;
+        width: 90%;
+        top: 60px;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 15px;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        z-index: 9;
+        background-color: var(--primary-color);
       }
-  /* End Header */
+    }
+
+  }
+
+  .burger-icon {
+    display: flex !important;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      color: var(--secondary-color);
+      border: 1px solid var(--secondary-color);
+    }
+  }
+}
+
+.active {
+  color: var(--secondary-color);
+}
+
+/* End Header */

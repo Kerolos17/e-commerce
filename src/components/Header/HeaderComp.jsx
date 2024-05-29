@@ -13,7 +13,9 @@ const HeaderComp = () => {
   const cartProduct = useSelector((state)=>state.product.items)
   useEffect(() => {
       window.addEventListener("resize", () => {
-        window.innerWidth <= 768 ? setMenu(true):setMenu(false)
+        let windowSize = window.innerWidth 
+        windowSize <= 768 ? setMenu(true):setMenu(false)
+        setBigMenu(false)
       });
 
   },[])
@@ -57,8 +59,8 @@ const HeaderComp = () => {
               </span>
             </div>
             {
-              menu ? bigMenu ? <MdClose size={30} onClick={changeMenu}  className="burger-icon"/> :
-               <RxHamburgerMenu size={30} onClick={changeMenu} className="burger-icon" /> :undefined
+               bigMenu ? <MdClose size={30} onClick={changeMenu}  className="burger-icon"/> :
+               <RxHamburgerMenu size={30} onClick={changeMenu} className="burger-icon" /> 
             }
           </div>
         </nav>
