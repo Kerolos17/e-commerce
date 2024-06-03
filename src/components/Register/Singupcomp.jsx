@@ -61,7 +61,7 @@ const Singupcomp = () => {
         </div>
         <div className="chang">
           <span>Already have an account?</span>
-          <Link to="/login">Sign In</Link>
+          <Link to="/login">login</Link>
         </div>
       </form>
     </section>

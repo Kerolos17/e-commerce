@@ -8,7 +8,6 @@ import { productSlice } from "../../Redux/ProductSlice";
 const Cart = () => {
   const [products, setProducts] = useState();
   const cartProduct = useSelector((state) => state.product.items);
-  const [total, setTotal] = useState(0);
   const Price = useSelector((state)=>state.product.total)
   const dispatch = useDispatch();
   useEffect(() => {

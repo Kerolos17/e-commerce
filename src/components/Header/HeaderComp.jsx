@@ -36,7 +36,7 @@ const HeaderComp = () => {
                 <NavLink to='/'>Home</NavLink>
               </li>
                 <li>
-                  <NavLink to="/login">Login</NavLink>
+                  <NavLink to="/Register">Register</NavLink>
                 </li>
               <li>
                 <NavLink to='/products'>Products </NavLink>

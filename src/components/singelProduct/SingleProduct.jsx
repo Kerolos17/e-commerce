@@ -7,8 +7,11 @@ import { FaSackDollar } from "react-icons/fa6";
 import { CiStar } from "react-icons/ci";
 import { FaRegHeart } from "react-icons/fa";
 import singleProduct from "./singleproduct.module.css";
+import { useDispatch } from "react-redux";
+import { productSlice } from "../../Redux/ProductSlice";
 const SingleProduct = () => {
   const { id } = useParams();
+  const dispatch =useDispatch();
   const [product, setProduct] = useState();
   const [star, setStar] = useState(false);
   const [star1, setStar1] = useState(false);
@@ -113,7 +116,7 @@ const SingleProduct = () => {
                 </h3>
               </div>
               <div className={singleProduct.cart_pro}>
-                <button className={singleProduct.cart_btn} >Add to Cart</button>
+                <button className={singleProduct.cart_btn}  onClick={()=>dispatch(productSlice.actions.addToCart(id))} >Add to Cart</button>
                 <div
                   className={singleProduct.heart}
                   style={

@@ -19,7 +19,7 @@ const SinginComp = () => {
   return (
     <section className="register">
      <form>
-     <h2>Singin</h2>
+     <h2>login</h2>
         <input type="email" placeholder="Enter Your Email" value={email}
         onChange={e=>setEmail(e.target.value)} />
         <input type="password" placeholder="Enter Your Password" value={password}
