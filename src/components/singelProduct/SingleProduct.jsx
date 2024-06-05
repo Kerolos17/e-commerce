@@ -116,7 +116,7 @@ const SingleProduct = () => {
                 </h3>
               </div>
               <div className={singleProduct.cart_pro}>
-                <button className={singleProduct.cart_btn}  onClick={()=>dispatch(productSlice.actions.addToCart(id))} >Add to Cart</button>
+                <button className={singleProduct.cart_btn}  onClick={()=>dispatch(productSlice.actions.addToCart(product))} >Add to Cart</button>
                 <div
                   className={singleProduct.heart}
                   style={

@@ -118,7 +118,7 @@ header {
         flex-direction: column;
         justify-content: center;
         gap: 15px;
-        z-index: 9;
+        z-index: 999;
         background-color: var(--primary-color);
       }
     }

@@ -14,13 +14,13 @@ const HeaderComp = () => {
   useEffect(() => {
       window.addEventListener("resize", () => {
         let windowSize = window.innerWidth 
-        windowSize <= 768 ? setMenu(true):setMenu(false)
+        windowSize <= 768 ? setMenu(false):setMenu(true)
       });
 
   },[])
   const changeMenu = () => {
     setBigMenu(!bigMenu)
-    setMenu(!menu)
+    // setMenu(!menu)
   };
   return (
     <Fragment>
@@ -31,7 +31,7 @@ const HeaderComp = () => {
           </div>
           <div className="links">
             <ul 
-            style={bigMenu? !menu ?{ display: "none" } :{display:'flex'}:undefined} >
+            style={bigMenu? (menu ?{ display: "none" } :{display:'flex'}):undefined} >
               <li>
                 <NavLink to='/'>Home</NavLink>
               </li>
