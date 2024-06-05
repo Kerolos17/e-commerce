@@ -21,7 +21,6 @@ function App() {
     <Route path='/cart/:id' element={<SingleProductComp/>}/>
     <Route path='/contactUs' element={<ContactUs/>}/>
     </Routes> 
-
   );
 }
 
